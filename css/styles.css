@@ -1,0 +1,224 @@
+:root {
+  --azul-principal: #0d47a1;
+  --azul-secundario: #1565c0;
+  --azul-claro: #e3f2fd;
+  --amarillo: #ffb300;
+  --gris-fondo: #f4f7fb;
+  --texto: #263238;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav .brand-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgba(13, 71, 161, 0.95), rgba(21, 101, 192, 0.88)),
+    url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1600&q=80")
+    center / cover;
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-row {
+  min-height: 510px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-label {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+}
+
+.hero-icon {
+  animation: floating-car 3s ease-in-out infinite;
+  font-size: 13rem;
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.service-card {
+  border-radius: 12px;
+  min-height: 290px;
+}
+
+.service-card .card-content {
+  min-height: 220px;
+}
+
+.benefit-icon {
+  font-size: 13rem;
+}
+
+.info-banner {
+  background: linear-gradient(120deg, #0d47a1, #1976d2);
+  padding: 70px 0;
+}
+
+.info-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.rounded-image {
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.page-min-height {
+  min-height: 75vh;
+}
+
+.form-buttons,
+.login-buttons {
+  margin-top: 30px;
+}
+
+.form-buttons .btn-large,
+.login-buttons .btn-large {
+  margin: 8px;
+}
+
+.login-main {
+  background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(21, 101, 192, 0.82)),
+    url("https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=1600&q=80")
+    center / cover;
+  min-height: calc(100vh - 128px);
+  padding: 60px 0;
+}
+
+.login-card {
+  border-radius: 14px;
+}
+
+.login-icon {
+  font-size: 5.5rem;
+}
+
+.login-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.login-links {
+  line-height: 2;
+  margin-top: 25px;
+}
+
+.login-links a {
+  color: var(--azul-secundario);
+  font-weight: 600;
+}
+
+.carousel {
+  min-height: 300px;
+}
+
+.carousel .carousel-item {
+  width: 320px;
+}
+
+.carousel .carousel-item img {
+  border-radius: 14px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: var(--azul-secundario) !important;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid var(--azul-secundario) !important;
+  box-shadow: 0 1px 0 0 var(--azul-secundario) !important;
+}
+
+@keyframes floating-car {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-icon {
+    font-size: 9rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav .brand-logo {
+    font-size: 1rem;
+  }
+
+  .hero-section,
+  .hero-row {
+    min-height: 560px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-section .btn-large {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .info-banner h1 {
+    font-size: 2.1rem;
+  }
+
+  .form-buttons .btn-large,
+  .login-buttons .btn-large {
+    display: block;
+    margin: 12px auto;
+    width: 100%;
+  }
+
+  .benefit-icon {
+    font-size: 8rem;
+  }
+}

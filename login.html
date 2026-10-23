@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicio de sesión ParkCavControl">
+  <title>ParkCavControl | Iniciar sesión</title>
+
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="login-page">
+  <header>
+    <nav class="blue darken-3">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo">
+          <i class="material-icons left">local_parking</i>
+          ParkCavControl
+        </a>
+
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="informacion.html">Información</a></li>
+          <li class="active"><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-menu">
+      <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
+      <li><a href="registro.html"><i class="material-icons">person_add</i>Registro</a></li>
+      <li><a href="informacion.html"><i class="material-icons">info</i>Información</a></li>
+      <li><a href="login.html"><i class="material-icons">login</i>Iniciar sesión</a></li>
+    </ul>
+  </header>
+
+  <main class="login-main">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card login-card z-depth-4">
+            <div class="card-content">
+              <div class="center-align">
+                <i class="material-icons login-icon blue-text text-darken-3">account_circle</i>
+                <h1 class="login-title blue-text text-darken-3">Iniciar sesión</h1>
+                <p class="grey-text text-darken-1">
+                  Ingrese sus credenciales para acceder a ParkCavControl.
+                </p>
+              </div>
+
+              <form id="loginForm">
+                <div class="input-field">
+                  <i class="material-icons prefix">email</i>
+                  <input id="loginCorreo" type="email" class="validate" required>
+                  <label for="loginCorreo">Correo electrónico</label>
+                </div>
+
+                <div class="input-field">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="loginPassword" type="password" required>
+                  <label for="loginPassword">Contraseña</label>
+                </div>
+
+                <p>
+                  <label>
+                    <input type="checkbox">
+                    <span>Recordar sesión</span>
+                  </label>
+                </p>
+
+                <div class="center-align login-buttons">
+                  <button
+                    class="btn-large blue darken-3 waves-effect waves-light"
+                    type="submit"
+                  >
+                    Ingresar
+                    <i class="material-icons right">login</i>
+                  </button>
+
+                  <a href="index.html" class="btn-large grey waves-effect waves-light">
+                    Volver
+                    <i class="material-icons right">arrow_back</i>
+                  </a>
+                </div>
+
+                <div class="center-align login-links">
+                  <a href="#recuperar" class="modal-trigger">
+                    ¿Olvidaste tu contraseña?
+                  </a>
+                  <br>
+                  <a href="registro.html">
+                    ¿No tienes cuenta? Regístrate aquí
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="recuperar" class="modal">
+    <div class="modal-content">
+      <h4>Recuperar contraseña</h4>
+      <p>
+        Ingresa tu correo electrónico y recibirás las indicaciones para recuperar el acceso.
+      </p>
+
+      <div class="input-field">
+        <input id="correoRecuperacion" type="email">
+        <label for="correoRecuperacion">Correo electrónico</label>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+        Cancelar
+      </a>
+      <a href="#!" id="btnRecuperar" class="modal-close waves-effect waves-light btn blue darken-3">
+        Enviar
+      </a>
+    </div>
+  </div>
+
+  <footer class="page-footer blue darken-3">
+    <div class="footer-copyright blue darken-4">
+      <div class="container">
+        © 2026 ParkCavControl — Inicio de sesión
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="css/js/app.js"></script>
+</body>
+</html>
